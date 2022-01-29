@@ -1,0 +1,17 @@
+.img-intro {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.8)
+  ), url('../../assets/cropped.jpg') no-repeat center center ;
+  background-size: contain;
+  height: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-intro img {
+  width: 100%;
+}
