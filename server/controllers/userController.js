@@ -26,5 +26,12 @@ module.exports = {
     res.status(401).send('Account with that email does not exist.')
   }
   },
-
+  getInfo: async (req, res) => {
+    const {user_id} = req.body
+    let info = await sequelize.query(`
+      SELECT * FROM all_user_info
+      WHERE user_id = '${user_id}'
+    `)
+    res.status(200).send(info)
+  }
 }
