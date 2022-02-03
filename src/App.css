@@ -1,3 +1,11 @@
+:root {
+  --main-color-one: #25AAE1;
+  --main-color-two: #f28123;
+  --main-bg-color: #161616;
+  --font-one: 'Roboto';
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,18 +64,18 @@ html, body, #root {
   width: 100vw;
 }
 h1, h2, h3, h4, p {
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-one);
   color: white;
 }
 
 h1 {
-  color: #25AAE1;
+  color: var(--main-color-one);
   font-size: 36px;
   padding-top: 40px;
 }
 
 h2 {
-  color: #25AAE1;
+  color: var(--main-color-one);
   font-size: 28px;
   padding-top: 20px;
 }
@@ -89,6 +97,7 @@ h4 {
   margin-top: 30px;
 }
 
+
 .blue-text {
   color: #25AAE1;
 }
@@ -98,13 +107,13 @@ button {
   height: 60px;
   width: 150px;
   background: transparent;
-  border: 3px solid #f28123;
+  border: 3px solid var(--main-color-two);
   border-radius: 3px;
   margin: 10px;
 }
 
 button:active {
-  background: #f28123;
-  color: #161616;
+  background: var(--main-color-two);
+  color: var(--main-bg-color);
   transition: all 0.1s ease-in-out;
 }

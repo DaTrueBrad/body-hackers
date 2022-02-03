@@ -23,7 +23,7 @@ function Menu() {
           Contact
         </NavLink>
         <br />
-        <NavLink to="/login" onClick={menuClick}>
+        <NavLink to="/register/pt1" onClick={menuClick}>
           Login / Register
         </NavLink>
         <NavLink to="/faq" onClick={menuClick}>
