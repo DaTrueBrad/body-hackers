@@ -14,6 +14,7 @@ app.use(cors());
 // User Endpoints
 app.get('/api/login', userController.loginUser)
 app.get('/api/userInfo', userController.getInfo)
+app.post('/api/registerOne', userController.registerOne)
 
 // Admin Endpoints
 app.get('/api/admin/getClientInfo', adminController.getClientInfo)

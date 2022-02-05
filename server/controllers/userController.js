@@ -10,8 +10,7 @@ module.exports = {
   `).catch((err) => console.log(err))
   console.log(validUser)
   if(validUser[1].rowCount === 1) {
-    //TODO if (bcrypt.compareSync(password, validUser[0][0].password)) {
-    if (password) { //! This line of code needs to be deleted!!
+    if (bcrypt.compareSync(password, validUser[0][0].password)) {
       let object = {
         id: validUser[0][0].id,
         first_name: validUser[0][0].first_name,
@@ -33,5 +32,28 @@ module.exports = {
       WHERE user_id = '${user_id}'
     `)
     res.status(200).send(info)
+  },
+  registerOne: async (req, res) => {
+    let {firstName, lastName, email, password} = req.body
+    const checkEmail = await sequelize.query(`SELECT * From users WHERE email = '${email}'`)
+    if(checkEmail[1].rowCount !== 0) {
+      res.status(500).send("Account with that email already exists")
+    } else {
+    const salt = bcrypt.genSaltSync(10)
+    const passwordHash = bcrypt.hashSync(password, salt)
+    await sequelize.query(`
+      INSERT INTO users(first_name, last_name, email, password)
+      VALUES (
+        '${firstName}',
+        '${lastName}',
+        '${email}',
+        '${password}'
+      )
+    `).catch(err => console.log(err))
+    let userInfo = await sequelize.query(`
+    SELECT first_name, last_name, id FROM users WHERE email = '${email}'
+    `).catch(err => console.log(err))
+    res.status(200).send(userInfo[0][0])
   }
+}
 }
