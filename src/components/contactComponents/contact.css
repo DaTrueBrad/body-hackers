@@ -1,0 +1,27 @@
+iframe {
+  height: 80vw;
+  width: 90vw;
+  margin: 10px 0px;
+}
+
+table {
+  color: white;
+  font-family: 'Roboto';
+  width: 100%;
+  font-size: 20px;
+}
+
+
+tr {
+  width: 100%;
+  
+}
+
+td:first-child {
+  text-align: left;
+  padding-left: 30px;
+}
+
+td {
+  padding: 10px 0px 10px 30px;
+}

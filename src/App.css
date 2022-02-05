@@ -88,9 +88,13 @@ h3 {
 h4 {
   font-size: 20px;
 }
+p {
+  font-size: 18px;
+}
 
 .page-wrapper {
   margin-top: 80px;
+  /* padding: 0px 15px; */
 }
 
 .page-section {
@@ -116,4 +120,8 @@ button:active {
   background: var(--main-color-two);
   color: var(--main-bg-color);
   transition: all 0.1s ease-in-out;
+}
+
+.spacer {
+  height: 50px;
 }

@@ -13,5 +13,10 @@
 }
 
 .img-intro img {
-  width: 100%;
+  width: 85%;
+}
+
+.img-intro h3, .img-intro button, .img-intro img {
+  position: relative;
+  top: -6%;
 }

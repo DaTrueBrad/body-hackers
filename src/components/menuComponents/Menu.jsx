@@ -7,6 +7,7 @@ import 'boxicons'
 function Menu() {
   const [isActive, setActive] = useState("true");
   const menuClick = () => setActive(!isActive);
+  //TODO We could od a universal click handler, that on click, toggles a class that will affect the target, and then sets all sibling classes to null, allowing us to effectively create an active class that can be active for all endpoints.
   return (
     <header>
       <img src={logo} alt="" />
@@ -16,7 +17,7 @@ function Menu() {
         <NavLink to="/" onClick={menuClick}>
           Home
         </NavLink>
-        <NavLink to="/team" onClick={menuClick}>
+        <NavLink to="/team/logan" onClick={menuClick}>
           Team
         </NavLink>
         <NavLink to="/contact" onClick={menuClick}>

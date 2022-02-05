@@ -17,10 +17,12 @@ Body hackers ia a sports massage studio built for athletes and performance. they
   - TBD: Admin can message users directly from the website.
 
 ## Checklist
-- [ ] Build database tables
-- [ ] Build a "grab all user data" function to join 5 tables and return data
+- [X] Build database tables
+- [X] Build a "grab all user data" function to join 5 tables and return data
 - [ ] figure out AWS or another img hosting service
 - [ ] build register endpoint
-- [ ] impliment Calendly API with Zapier for messaging
 - [x] build login endpoint
 - [ ] build admin search function (must have admin table for auth purposes)
+
+## Ideas
+- MENU COMPONENT => We could create a universal click handler, that on click, toggles a class that will affect the target, and then sets all sibling classes to null, allowing us to effectively create an active class that can be active for all endpoints past the intial path, i.e. link to /team, remain active for /team/logan.
