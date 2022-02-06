@@ -6,9 +6,13 @@ function ContactPage() {
   return (
     <div className="page-wrapper">
       <h1>Contact Us</h1>
-      <Link to="/register/pt1">
+      <div className="button-container-hz">
+        <a href="tel:9999999999"><button>Call us</button></a>
+        <Link to="/register/pt1">
         <button>Schedule</button>
       </Link>
+      </div>
+      
       <h2>Location</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.982134575929!2d-111.65318068424651!3d40.27614707210065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9089d5072af1%3A0xf28859aa314a8660!2s3210%20N%20Canyon%20Rd%20%23%20307%2C%20Provo%2C%20UT%2084604!5e0!3m2!1sen!2sus!4v1644079972355!5m2!1sen!2sus"

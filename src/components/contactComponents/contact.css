@@ -1,3 +1,9 @@
+.button-container-hz {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 iframe {
   height: 80vw;
   width: 90vw;
