@@ -59,9 +59,28 @@ html, body, #root {
   font-family: 'Roboto';
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #25AAE1;
+  color: #161616;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer p {
+  color: #161616;
+}
+
 .App {
   text-align: center;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
 }
 h1, h2, h3, h4, p {
   font-family: var(--font-one);
@@ -72,6 +91,7 @@ h1 {
   color: var(--main-color-one);
   font-size: 36px;
   padding-top: 40px;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -94,7 +114,7 @@ p {
 
 .page-wrapper {
   margin-top: 80px;
-  /* padding: 0px 15px; */
+  padding-bottom: 85px;
 }
 
 .page-section {
@@ -125,7 +145,7 @@ button:active {
 .spacer {
   height: 50px;
 }
-input {
+input, select {
   width: 300px;
   height: 38px;
   font-size: 24px;
@@ -140,4 +160,42 @@ input {
   color: red;
   font-size: 18px;
   font-family: 'Roboto';
+}
+
+input[type=checkbox] {
+ height: 28px;
+ width: 28px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion__heading {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: 'Roboto';
+  margin: 0;
+  width: 95vw;
+}
+
+.accordion__button {
+  box-sizing: border-box;
+  background-color: none;
+}
+
+.accordion__panel {
+  background-color: #f4f4f4;
+  font-family: 'Roboto';
+  font-size: 20px;
 }

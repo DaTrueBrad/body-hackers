@@ -1,11 +1,14 @@
 import "./auth.css";
 import React from "react";
-import { Formik, Form, Field, useFormik } from "formik";
+import { Formik, Form, Field} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 function RegUserInfo() {
+
+  const navigate = useNavigate()
 
   const SignupSchema = Yup.object().shape({
     firstName: Yup.string()
@@ -49,6 +52,7 @@ function RegUserInfo() {
             localStorage.setItem('firstName', res.data.first_name)
             localStorage.setItem('lastName', res.data.last_name)
             localStorage.setItem('Email', res.data.email)
+            navigate('/register/pt2')
           })
           .catch((err) => {
             Swal.fire({

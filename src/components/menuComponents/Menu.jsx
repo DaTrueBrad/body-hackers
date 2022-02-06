@@ -23,13 +23,18 @@ function Menu() {
         <NavLink to="/contact" onClick={menuClick}>
           Contact
         </NavLink>
+        <NavLink to="/faq" onClick={menuClick}>
+          FAQ
+        </NavLink>
         <br />
         <NavLink to="/register/pt1" onClick={menuClick}>
           Login / Register
         </NavLink>
-        <NavLink to="/faq" onClick={menuClick}>
-          FAQ
+        <NavLink to="/dashboard" onClick={menuClick}>
+          Profile
         </NavLink>
+        
+        
       </nav>
     </header>
   );

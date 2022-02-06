@@ -10,6 +10,7 @@ import FAQ from './components/faqComponents/FAQ';
 import DashboardPage from './components/dashboardComponents/DashboardPage';
 import RegistrationPage from './components/authComponents/RegistrationPage';
 import NotFound from './components/NotFound';
+import Footer from './components/menuComponents/Footer';
 
 function App() {
   return (
@@ -19,11 +20,13 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='contact' element={<ContactPage />} />
         <Route path='team/*' element={<TeamPage />} />
-        <Route path='login' element={<DashboardPage />} />
+        <Route path='login' element={<Login />} />
+        <Route path='dashboard' element={<DashboardPage />} />
         <Route path='faq' element={<FAQ />} />
         <Route path='register/*' element={<RegistrationPage />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
