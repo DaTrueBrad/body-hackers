@@ -16,6 +16,7 @@ function LandingPage() {
         <button>Schedule</button>
       </section>
       <About />
+      <script src='https://square.site/appointments/buyer/widget/95vt9gnzky1vyb/L4TJTCSBD8YRQ.js'></script>
     </div>
   );
 }

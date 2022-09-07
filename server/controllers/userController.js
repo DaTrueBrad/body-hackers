@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 const sequelize = require('../sequelize')
 
-module.exports = {
+module.exports = { 
   loginUser: async (req, res) => {
     //TODO when this is ready to run, this needs to change to req.params
     const {email, password} = req.body
